@@ -1,21 +1,18 @@
 import React, { } from "react";
-
 import {Link} from "react-router-dom";
+import '../styles/LandingPage.css'; 
 
 export default function LandingPage() {
     return (
         <div>
-            <div className="landing-page">
-                <div className="landing-page-content">
+            <div className='wrapper'>
                     <h1>Welcome to Digitiser</h1>
-                    <p>
-                        Digitiser is a web application that allows you to digitize your documents.
-                    </p>
+                    <h2>An Automated Digitization System <br/> for Vietnam Birth Certificates.</h2>
+
                     <Link to="/login">
                         <button>Login</button>
                     </Link>
-                </div>
-            </div>
+                        </div>
         </div>
     );
 }

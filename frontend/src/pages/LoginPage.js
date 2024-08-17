@@ -3,6 +3,7 @@ import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye';
 import { Link } from 'react-router-dom';
+import '../styles/LoginPage.css';
 import axios from 'axios';
 
 export default function LoginPage() {
@@ -47,9 +48,15 @@ export default function LoginPage() {
     return (
         <div>
             <div className='wrapper'>
-                <form onSubmit={logInUser}>
-                    <h1>Log in to Digitiser</h1>
+                <div>
+                    <Link to="/">
+                        <button>Back</button>
+                    </Link>
 
+                    <h1>Log in to Digitiser</h1>
+                </div>
+
+                <form onSubmit={logInUser}>
                     <div className="input-box">
                         <input
                             type='text'
