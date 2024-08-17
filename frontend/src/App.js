@@ -5,7 +5,7 @@ import { app, analytics } from './firebase';
 
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
-import AdminFolder from './pages/AdminFolder';
+import Dashboard from './pages/Dashboard';
 import ErrorPage from './pages/ErrorPage';
 import CheckerPage from './pages/CheckerPage';
 
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage />}/>
           <Route path='/login' element={<LoginPage />}/>
-          <Route path='/AdminFolder' element={<AdminFolder />}/>
+          <Route path='/Dashboard' element={<Dashboard />}/>
           <Route path='*' element={<ErrorPage />}/>
           <Route path='/CheckerPage' element={<CheckerPage />}/>
         </Routes>
