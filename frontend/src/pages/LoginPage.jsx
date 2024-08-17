@@ -47,17 +47,15 @@ export default function LoginPage() {
 
     return (
         <div>
-            <div className='wrapper'>
-                <div>
+            <div className='login-wrapper'>
                     <Link to="/">
                         <button>Back</button>
                     </Link>
 
                     <h1>Log in to Digitiser</h1>
-                </div>
 
                 <form onSubmit={logInUser}>
-                    <div className="input-box">
+                    <div className="login-input-box">
                         <input
                             type='text'
                             placeholder='Username'
@@ -66,7 +64,7 @@ export default function LoginPage() {
                         />
                     </div>
 
-                    <div className="input-box">
+                    <div className="login-input-box">
                         <input
                             type={type}
                             name="password"
@@ -88,14 +86,14 @@ export default function LoginPage() {
                         </span>
                     </div>
 
-                    <div className="remember-forget">
+                    <div className="login-remember-forget">
                         <label><input type="checkbox" /> Remember me</label>
                         <a href="#"> Forgot password?</a>
                     </div>
 
                     <button type='submit'>Log In</button>
 
-                    <div className="register">
+                    <div className="login-register">
                         <p>Don't have an account? <Link to="/register">Register</Link></p>
                     </div>
                 </form>

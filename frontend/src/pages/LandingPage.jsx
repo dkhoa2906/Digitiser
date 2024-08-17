@@ -5,12 +5,12 @@ import '../styles/LandingPage.css';
 export default function LandingPage() {
     return (
         <div>
-            <div className='wrapper'>
+            <div className='landing-wrapper'>
                     <h1>Welcome to Digitiser</h1>
                     <h2>An Automated Digitization System <br/> for Vietnam Birth Certificates.</h2>
 
                     <Link to="/login">
-                        <button>Login</button>
+                        <button>Continue</button>
                     </Link>
                         </div>
         </div>
