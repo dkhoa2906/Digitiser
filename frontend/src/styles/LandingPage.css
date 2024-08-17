@@ -1,0 +1,27 @@
+.wrapper {
+    width: 420px;
+    background-color: rgb(192, 192, 192);
+    /* border: 2px solid rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: rgb(41, 41, 41);
+    border-radius: 10px;
+    padding: 40px 40px;
+}
+
+.wrapper h1 {
+    margin-top: 0%;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.wrapper h2 {
+    margin-top: 0%;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
