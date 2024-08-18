@@ -48,11 +48,22 @@ export default function LoginPage() {
     return (
         <div>
             <div className='login-wrapper'>
-                    <Link to="/">
-                        <button>Back</button>
-                    </Link>
+                    
+                        <h1>
+                            <span
+                                style={{
+                                    position: 'absolute',
+                                    left: '25px',
+                                    top: '35px',
+                                }}>
+                                <Link to="/">
+                                    <a className='login-back'>◄ Back</a>
+                                </Link>
+                            </span>
+                            Log in to Digitiser
 
-                    <h1>Log in to Digitiser</h1>
+                        </h1>
+                    
 
                 <form onSubmit={logInUser}>
                     <div className="login-input-box">

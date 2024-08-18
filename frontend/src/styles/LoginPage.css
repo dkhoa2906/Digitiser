@@ -6,7 +6,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: rgb(255, 255, 255);
     border-radius: 10px;
-    padding: 40px 40px;
+    padding: 70px 40px 40px 40px;
 }
 
 .login-wrapper h1 {
@@ -14,6 +14,22 @@
     font-size: 25px;
     text-align: center;
     font-weight: 600;
+}
+
+.login-wrapper h1 a {
+
+    cursor: pointer;
+    font-size: 14.5px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.login-back:hover {
+
+    color: rgb(26, 155, 214);
+    text-decoration: none;
 }
 
 .login-wrapper .login-input-box {
@@ -42,6 +58,12 @@
 
 .login-remember-forget a:hover {
     color: rgb(29, 174, 241);
+}
+
+.login-remember-forget input[type=checkbox]::before {
+    background-color: #000000;
+    border: solid white;
+
 }
 
 .login-wrapper Button {
@@ -73,7 +95,6 @@
 
 .login-register p a {
     color: white;
-    text-decoration: none;
     font-weight: 500;
     text-decoration: underline;
 }
