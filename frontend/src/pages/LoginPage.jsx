@@ -69,7 +69,7 @@ export default function LoginPage() {
                     <div className="login-input-box">
                         <input
                             type='text'
-                            placeholder='Username'
+                            placeholder='Email address'
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
