@@ -29,7 +29,7 @@ with app.app_context():
 # LANDING PAGE TO MAKE SURE IT WORKS
 @app.route("/")
 def hello_world():
-    return "Hello World"
+    return "Deploy successfully! Chuc mung Minh Ngu yen"
 
 # SIGN UP
 @app.route("/signup", methods=["POST"])
