@@ -12,7 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'khoa-minh-ngu'
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:ShEcWfBoyMiIjeruEheNubUKsRPumvxf@junction.proxy.rlwy.net:48127/railway'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
