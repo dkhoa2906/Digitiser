@@ -2,13 +2,17 @@ from flask import Flask, jsonify, request, session
 from flask_sqlalchemy import SQLAlchemy
 import bcrypt
 from flask_cors import CORS, cross_origin
+from dotenv import load_dotenv
+import os
 
 from models import db, User
+
+load_dotenv()
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'khoa-minh-ngu'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
@@ -22,24 +26,31 @@ with app.app_context():
 
 ######################## ROUTES ########################
 
+# LANDING PAGE TO MAKE SURE IT WORKS
+@app.route("/")
+def hello_world():
+    return "Hello World"
 
 # SIGN UP
 @app.route("/signup", methods=["POST"])
-def signup():
+def sign_up():
     fullName = request.json.get("fullName")
     email = request.json.get("email")
-    password = request.json.get("password")
+    password = request.json.get("password").encode("utf-8")
     
     isUserExist = User.query.filter_by(email=email).first() is not None
 
     if isUserExist:
-        return jsonify({"error": "User already exists"}), 409
-    
-    passwordBytes = password.encode('utf-8')
-    salt = bcrypt.gensalt()
-    hashedPassword = bcrypt.hashpw(passwordBytes, salt)
+        return jsonify({"error": "User already exists"}), 409 
 
-    newUser = User(fullName=fullName, email=email, password=hashedPassword)
+    hashedPassword = bcrypt.hashpw(password, bcrypt.gensalt(12))
+
+    newUser = User(
+        fullName=fullName,
+        email=email,
+        password=hashedPassword.decode("utf-8")
+    )
+    
     db.session.add(newUser)
     db.session.commit() 
 
@@ -53,19 +64,18 @@ def signup():
 
 # LOGIN
 @app.route("/login", methods=["POST"])
-def login():
+def log_in():
     email = request.json.get("email")
-    password = request.json.get("password")
+    password = request.json.get("password").encode("utf-8")
 
     user = User.query.filter_by(email=email).first()
 
     if user is None:
         return jsonify({"error": "Unauthorized Access"}), 401
 
-    passwordBytes = password.encode('utf-8')
-    hashedPassword = user.password
-
-    if not bcrypt.checkpw(passwordBytes, hashedPassword):
+    hashedPassword = user.password.encode("utf-8")
+    
+    if not bcrypt.checkpw(password, hashedPassword):
         return jsonify({"error": "Unauthorized"}), 401
 
     session["user_id"] = user.id

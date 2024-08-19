@@ -10,16 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: url('C:\D drive\Study\Web-Database\DIGITISE\src\Components\Asset\pexels-louis-phdc-153256-691541.jpg')
-    no-repeat; */
     background-size: cover;
     background-position: center;
     /* background-color: black; */
     background-image: linear-gradient(rgb(56, 56, 56), rgb(0, 0, 0));;
 }
-
-
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -31,114 +26,3 @@ code {
   font-size: 40px;
   font-weight: 300;
 }
-
-.wrapper {
-  width: 420px;
-  background-color: rgb(21, 20, 20);
-  /* border: 2px solid rgba(255, 255, 255, 0.2); */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 40px 40px;
-}
-
-.wrapper h1 {
-  margin-top: 0%;
-  font-size: 25px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.wrapper .input-box {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  margin: 30px 0;
-}
-
-.wrapper .remember-forget {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: 10px 0 10px;
-}
-
-.remember-forget label input {
-  accent-color: rgb(0, 0, 0);
-  margin-right: 4px;
-}
-
-.remember-forget a {
-  color: white;
-  text-decoration: underline;
-}
-
-.remember-forget a:hover {
-  color: rgb(29, 174, 241);
-}
-
-.wrapper Button {
-  width: 100%;
-  height: 45px;
-  background-color: rgb(29, 174, 241);
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  font-weight: 700;
-  margin-top: 15px;
-  transition: 0.3s;
-}
-
-.wrapper button:hover {
-  background-color:  rgb(26, 155, 214);
-  transition: 0.3s
-}
-
-.wrapper .register {
-  font-size: 14.5px;
-  text-align: center;
-  margin: 25px 0 10px;
-}
-
-.register p a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.register p a:hover {
-  color: rgb(29, 174, 241);
-}
-
-.input-box input {
-  width: 85%;
-  height: 10px;
-  background: transparent;
-  border: 2px solid rgb(163, 162, 162);
-  outline: none;
-  border-radius: 40px;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
-  padding: 20px 45px 20px 20px;
-  transition: 0.3s;
-
-  
-}
-
-.input-box input:hover {
-  border-color: white;
-  transition: 0.3s;
-
-}
-
-.input-box input::placeholder {
-  color: rgb(163, 162, 162);
-}
-
-
