@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import { app, analytics } from './firebase';
@@ -13,6 +13,7 @@ import CheckerPage from './pages/CheckerPage';
 function App() {
   console.log(app);
   console.log(analytics);
+
 
   return (
     <div>

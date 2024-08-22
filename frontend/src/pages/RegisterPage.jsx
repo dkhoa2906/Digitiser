@@ -1,15 +1,40 @@
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
-import {Icon} from 'react-icons-kit';
-import {eyeOff} from 'react-icons-kit/feather/eyeOff';
-import {eye} from 'react-icons-kit/feather/eye';
+import { Icon } from 'react-icons-kit';
+import { eyeOff } from 'react-icons-kit/feather/eyeOff';
+import { eye } from 'react-icons-kit/feather/eye';
 import '../styles/RegisterPage.css';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 
 export default function RegisterPage() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [fullName, setFullName] = useState("");
+    
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+   
+    const navigate = useNavigate();
+     
+    const registerUser = (e) => {
+        e.preventDefault();
+        axios.post('https://digitiser.up.railway.app/signup', {
+            email: email,
+            password: password,
+            fullName: fullName
+        })
+        .then(function (response) {
+            console.log(response);
+            navigate("/login");
+        })
+        .catch(function (error) {
+            console.log(error, 'error');
+            if (error.response && error.response.status === 401) {
+                alert("Invalid credentials");
+            }
+        });
+    };
+
     const [type, setType] = useState('password');
     const [icon, setIcon] = useState(eyeOff);
 
@@ -24,9 +49,9 @@ export default function RegisterPage() {
     };
 
     return (
-        <div>
-            <div className = 'register-wrapper'>
-                <form >
+        <div className='register-body'>
+            <div className='register-wrapper'>
+                <form onSubmit={registerUser}>
                     <h1>Sign up for Digitiser</h1>
 
                     <div className="register-input-box">
@@ -46,7 +71,7 @@ export default function RegisterPage() {
                     </div>
 
                     <div className="register-input-box">
-                        <input type= {type} name="password"
+                        <input type={type} name="password"
                                 placeholder='Password'
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}

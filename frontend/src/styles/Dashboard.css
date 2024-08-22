@@ -1,0 +1,57 @@
+.dashboard-spinner-container {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* background-color: white; */
+    background-image: linear-gradient(rgb(56, 56, 56), rgb(0, 0, 0));;
+}
+
+
+.dashboard-sidebar {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: rgb(21, 20, 20);
+}
+
+.dashboard-body {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 40px; 
+    position: fixed;
+    margin-left: 280px;
+    height: 100vh; 
+    width: calc(100% - 280px);
+
+}
+
+.dashboard-uploader {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 650px; 
+    width: 500px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.dashboard-result {
+    margin-bottom: 40px;
+}
+
+.uploader-uploader, .uploader-result {
+    position: static; 
+}

@@ -1,0 +1,85 @@
+a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sidebar-brand {
+    position: absolute;
+    color: white;
+    background: rgb(21, 20, 20);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-weight: 700;
+    width: 200px;
+    height: 45px;
+    font-size: large;
+}
+
+.sidebar-conmeo {
+    position: absolute;
+    top: 100px;
+    color: white;
+    background:rgb(29, 174, 241);
+    border: none;
+    outline: none;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .1); */
+    cursor: pointer;
+    font-weight: 700;
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+}
+
+.sidebar-concho {
+    position: absolute;
+    top: 145px;
+    color: white;
+    background:rgb(43, 41, 41);
+    border: none;
+    outline: none;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .1); */
+    cursor: pointer;
+    font-weight: 700;
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+}
+
+.sidebar-conga {
+    position: absolute;
+    top: 190px;
+    color: white;
+    background:rgb(43, 41, 41);
+    border: none;
+    outline: none;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .1); */
+    cursor: pointer;
+    font-weight: 700;
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+}
+
+.sidebar-logout {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    background: rgb(43, 41, 41);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-weight: 700;
+    width: 190px;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 12px;
+    left: 5px;
+}
+
+.sidebar-icon {
+    transform: translateY(15%);
+}
