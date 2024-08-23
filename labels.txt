@@ -1,0 +1,108 @@
+Số: gks_so
+Quyển số: gks_quyenSo
+
+Họ và tên: con_hoVaTen
+Giới tính: con_gioiTinh
+Ngày, tháng, năm sinh: con_ngaySinh
+Ghi bằng chữ: con_ngaySinhChu
+Nơi sinh: con_noiSinh
+Dân tộc: con_danToc
+Quốc tịch: con_quocTich
+
+Họ và tên cha: cha_hoVaTen
+Dân tộc cha: cha_danToc
+Quốc tịch cha: cha_quocTich
+Năm sinh cha: cha_namSinh
+Nơi thường trú/tạm trú cha: cha_noiThuongTruTamTru
+
+Họ và tên mẹ: mẹ_hoVaTen
+Dân tộc mẹ: me_danToc
+Quốc tịch mẹ: me_quocTich
+Năm sinh mẹ: me_namSinh
+Nơi thường trú/tạm trú mẹ: me_noiThuongTruTamTru
+
+Nơi đăng ký: gks_noiDangKy
+Ngày, tháng, năm đăng ký: gks_ngayDangKy
+Ghi chú: gks_ghiChu
+
+Họ và tên người đi khai sinh: nks_hoVaTen
+Quan hệ với người được khai sinh: nks_quanHe
+
+Người thực hiện: gks_nguoiThucHien
+Người ký: gks_nguoiKy
+
+===================================================
+
+
+Số
+Quyển số
+
+Họ và tên
+Giới tính
+Ngày, tháng, năm sinh
+Ghi bằng chữ
+Nơi sinh
+Dân tộc
+Quốc tịch
+
+Họ và tên cha
+Dân tộc cha
+Quốc tịch cha
+Năm sinh cha
+Nơi thường trú/tạm trú cha
+
+Họ và tên mẹ
+Dân tộc mẹ
+Quốc tịch mẹ
+Năm sinh mẹ
+Nơi thường trú/tạm trú
+
+Nơi đăng ký
+Ngày, tháng, năm đăng ký
+Ghi chú
+
+Họ và tên người đi khai sinh
+Quan hệ với người được khai sinh
+
+Người thực hiện
+Người ký
+
+============================================================
+
+Given an image file of Vietnam Birth Document, extract the information in the document as JSON.
+This is common keys that could exist in the document (this is also the order of existence of the keys in a normal case):
+Số
+Quyển số
+
+Họ và tên
+Giới tính
+Ngày, tháng, năm sinh
+Ghi bằng chữ
+Nơi sinh
+Dân tộc
+Quốc tịch
+
+Họ và tên cha
+Dân tộc cha
+Quốc tịch cha
+Năm sinh cha
+Nơi thường trú/tạm trú cha
+
+Họ và tên mẹ
+Dân tộc mẹ
+Quốc tịch mẹ
+Năm sinh mẹ
+Nơi thường trú/tạm trú
+
+Nơi đăng ký
+Ngày, tháng, năm đăng ký
+Ghi chú
+
+Họ và tên người đi khai sinh
+Quan hệ với người được khai sinh
+
+Người thực hiện
+Người ký
+
+In these labels, some could be missing and some could be leaved blank. In that case, return no value for the blanked keys and no return for the missing ones. Also, there could have some addition labels that i didn't provide you yet, in that case don't return it. I want the output is a JSON in the order of the existence of field keys.
+Note that "Nơi đăng ký" could be sometimes exist at top-left corner. The value of "Người thực hiện" can be replace with the name below "Cán bộ tư pháp hộ tịch" if it existed; the value of "Người ký" can be replace with the name below TM. ỦY BAN NHÂN DÂN in bottom-right corner. All names case should be written in Capitalization style

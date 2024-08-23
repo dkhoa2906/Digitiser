@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+/venv
+venv/
+
 # testing
 /coverage
 
@@ -24,5 +27,10 @@ yarn-error.log*
 
 .env
 
+
 /node_modules
 node_modules/
+
+/venv
+venv/
+
