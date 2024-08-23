@@ -1,0 +1,29 @@
+gks_so=data.get('Số'),
+gks_quyenSo=data.get('Quyển số'),
+
+con_hoVaTen=data.get('Họ và tên'),
+con_gioiTinh=data.get('Giới tính'),
+con_ngaySinh=data.get('Ngày, tháng, năm sinh'),
+con_ngaySinhChu=data.get('Ghi bằng chữ'),
+con_noiSinh=data.get('Nơi sinh'),
+con_danToc=data.get('Dân tộc'),
+con_quocTich=data.get('Quốc tịch'),
+
+cha_hoVaTen=data.get('Họ và tên cha'),
+cha_danToc=data.get('Dân tộc cha'),
+cha_quocTich=data.get('Quốc tịch cha'),
+cha_namSinh=data.get('Năm sinh cha'),
+cha_noiThuongTruTamTru=data.get('Nơi thường trú/tạm trú cha'),
+
+me_hoVaTen=data.get('Họ và tên mẹ'),
+me_danToc=data.get('Dân tộc mẹ'),
+me_quocTich=data.get('Quốc tịch mẹ'),
+me_namSinh=data.get('Năm sinh mẹ'),
+me_noiThuongTruTamTru=data.get('Nơi thường trú/tạm trú mẹ'),
+
+gks_noiDangKy=data.get('Nơi đăng ký'),
+gks_ngayDangKy=data.get('Ngày, tháng, năm đăng ký'),
+gks_ghiChu=data.get('Ghi chú'),
+
+gks_nguoiThucHien=data.get('Người thực hiện'),
+gks_nguoiKy=data.get('Người ký')
