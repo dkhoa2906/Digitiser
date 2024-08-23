@@ -46,20 +46,25 @@ export default function LoginPage() {
                 email: email,
                 password: password
             })
-                .then(function (response) {
-                    console.log(response);
-                    navigate("/dashboard");
-                })
-                .catch(function (error) {
-                    console.log(error);
-                    if (error.response && error.response.status === 401) {
-                        alert("Incorrect email or password");
-                    } else {
-                        alert("An error occurred");
-                    }
-                });
+            .then(function (response) {
+                const token = response.data.access_token;
+                localStorage.setItem('authToken', token);
+                console.log('Token stored:', token); // Log the token
+                navigate("/dashboard");
+            })
+            
+            .catch(function (error) {
+                console.log(error);
+                if (error.response && error.response.status === 401) {
+                    alert("Incorrect email or password");
+                } else {
+                    alert("An error occurred");
+                }
+            });
         }
     };
+    
+    
 
     return (
         <div className='login-body'>

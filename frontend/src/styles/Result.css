@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     height: 630px; 
-    width: 500px; 
+    width: 750px; 
     background-color: black;
     color: white;
 }
@@ -27,8 +27,8 @@
     color: #333;
     font-weight: 700;
     margin-top: 15px;
-    width: 100px;
-    margin-left: 400px;
+    width: 200px;
+    margin-left: 550px;
     transition: 0.3s;
     position: absolute;
 }

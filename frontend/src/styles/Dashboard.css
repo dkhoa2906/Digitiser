@@ -27,7 +27,7 @@
     display: flex;
     justify-content: flex-start; 
     align-items: center; 
-    gap: 40px; 
+    /* gap: 0px;  */
     position: fixed;
     margin-left: 280px;
     height: 100vh; 
@@ -46,6 +46,7 @@
     width: 500px;
     background-color: white;
     margin-top: 20px;
+    margin-left: -80px;
 }
 
 .dashboard-result {

@@ -14,11 +14,11 @@ export default function Sidebar() {
             </div>               
 
             <div>
-                <button className='sidebar-conmeo'> Con meo </button>
+                <button className='sidebar-conmeo'> Birth Certificate </button>
 
-                <button className='sidebar-concho'> Con cho </button>
+                <button className='sidebar-concho'> Driver's license </button>
                 
-                <button className='sidebar-conga'> Con ga </button>
+                <button className='sidebar-conga'> Identity Card </button>
             </div>  
 
             <div>
