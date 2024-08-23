@@ -1,16 +1,31 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye';
 import { Link } from 'react-router-dom';
 import '../styles/LoginPage.css';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import { SkewLoader } from 'react-spinners';
+
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [type, setType] = useState('password');
     const [icon, setIcon] = useState(eyeOff);
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+          setLoading(false)
+    
+        }, 1500)
+    
+      }, [])
+
 
     const handleToggle = () => {
         if (type === 'password') {
@@ -27,26 +42,43 @@ export default function LoginPage() {
         if (email.length === 0 || password.length === 0) {
             alert("Please fill in all fields");
         } else {
-            axios.post('http://127.0.0.1:5000/login', {
+            axios.post('https://digitiser.up.railway.app/login', {
                 email: email,
                 password: password
             })
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                    if (error.response && error.response.status === 401) {
-                        alert("Incorrect email or password");
-                    } else {
-                        alert("An error occurred");
-                    }
-                });
+            .then(function (response) {
+                const token = response.data.access_token;
+                localStorage.setItem('authToken', token);
+                console.log('Token stored:', token); // Log the token
+                navigate("/dashboard");
+            })
+            
+            .catch(function (error) {
+                console.log(error);
+                if (error.response && error.response.status === 401) {
+                    alert("Incorrect email or password");
+                } else {
+                    alert("An error occurred");
+                }
+            });
         }
     };
+    
+    
 
     return (
-        <div>
+        <div className='login-body'>
+
+            {loading? 
+                <SkewLoader 
+                    color={'rgb(29, 174, 241)'}
+                    loading={loading}
+                    size={50}
+                    aria-label="Loading Spinner"
+                    data-testid="loader"
+
+                /> :
+
             <div className='login-wrapper'>
                     
                         <h1>
@@ -69,7 +101,7 @@ export default function LoginPage() {
                     <div className="login-input-box">
                         <input
                             type='text'
-                            placeholder='Username'
+                            placeholder='Email address'
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
@@ -109,6 +141,7 @@ export default function LoginPage() {
                     </div>
                 </form>
             </div>
+            }
         </div>
     );
 }

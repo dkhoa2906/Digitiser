@@ -1,3 +1,17 @@
+.landing-body {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* background-color: white; */
+    background-image: linear-gradient(rgb(56, 56, 56), rgb(0, 0, 0));;
+}   
+
 .landing-wrapper {
     width: 420px;
     background-color: rgb(21, 20, 20);
@@ -50,3 +64,4 @@
     background-color:  rgb(26, 155, 214);
     transition: 0.3s
 }
+

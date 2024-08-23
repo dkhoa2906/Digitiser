@@ -1,5 +1,4 @@
-.login-body {
-    border: none;
+.register-body {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -10,9 +9,9 @@
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgb(56, 56, 56), rgb(0, 0, 0));;
-}
+}    
 
-.login-wrapper {
+.register-wrapper {
     width: 420px;
     background-color: rgb(21, 20, 20);
     /* border: 2px solid rgba(255, 255, 255, 0.2); */
@@ -23,14 +22,14 @@
     padding: 70px 40px 40px 40px;
 }
 
-.login-wrapper h1 {
+.register-wrapper h1 {
     margin-top: 0%;
     font-size: 25px;
     text-align: center;
     font-weight: 600;
 }
 
-.login-wrapper h1 a {
+.register-wrapper h1 a {
 
     cursor: pointer;
     font-size: 14.5px;
@@ -40,47 +39,47 @@
     text-decoration: none;
 }
 
-.login-back:hover {
+.register-back:hover {
 
     color: rgb(26, 155, 214);
     text-decoration: none;
 }
 
-.login-wrapper .login-input-box {
+.register-wrapper .register-input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
-.login-wrapper .login-remember-forget {
+.register-wrapper .register-remember-forget {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: 10px 0 10px;
 }
 
-.login-remember-forget label input {
+.register-remember-forget label input {
     accent-color: rgb(0, 0, 0);
     margin-right: 4px;
 }
 
-.login-remember-forget a {
+.register-remember-forget a {
     color: white;
     text-decoration: underline;
 }
 
-.login-remember-forget a:hover {
+.register-remember-forget a:hover {
     color: rgb(29, 174, 241);
 }
 
-.login-remember-forget input[type=checkbox]::before {
+.register-remember-forget input[type=checkbox]::before {
     background-color: #000000;
     border: solid white;
 
 }
 
-.login-wrapper Button {
+.register-wrapper Button {
     width: 100%;
     height: 45px;
     background-color: rgb(29, 174, 241);
@@ -96,28 +95,29 @@
     transition: 0.3s;
 }
 
-.login-wrapper button:hover {
+.register-wrapper button:hover {
     background-color:  rgb(26, 155, 214);
     transition: 0.3s
 }
 
-.login-wrapper .login-register {
+.register-wrapper .register-login {
     font-size: 14.5px;
     text-align: center;
     margin: 25px 0 10px;
 }
 
-.login-register p a {
+.register-login p a {
     color: white;
     font-weight: 500;
     text-decoration: underline;
 }
 
-.login-register p a:hover {
+
+.register-login p a:hover {
     color: rgb(29, 174, 241);
 }
 
-.login-input-box input {
+.register-input-box input {
     width: 85%;
     height: 10px;
     background: transparent;
@@ -132,12 +132,12 @@
     
 }
 
-.login-input-box input:hover {
+.register-input-box input:hover {
     border-color: white;
     transition: 0.3s;
 
 }
 
-.login-input-box input::placeholder {
+.register-input-box input::placeholder {
     color: rgb(163, 162, 162);
 }
