@@ -46,12 +46,7 @@ with app.app_context():
 # LANDING PAGE TO MAKE SURE IT WORKS
 @app.route("/")
 def hello_world():
-<<<<<<< Updated upstream
-    return "Hello World"
-=======
-    return "Deploy successfully!"
-
->>>>>>> Stashed changes
+    return "Deploy successfully! Chuc mung Minh Ngu yen"
 
 # SIGN UP
 @app.route("/signup", methods=["POST"])
